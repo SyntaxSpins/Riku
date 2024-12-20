@@ -3,15 +3,15 @@ package dev.trindadedev.learn.ui.components.drag
 import android.content.Context
 import android.util.AttributeSet
 import android.view.MotionEvent
-import android.view.View
+import android.view.ViewGroup
 
-class DragView @JvmOverloads
+class DragLayout @JvmOverloads
 constructor(
   context: Context,
   attrs: AttributeSet? = null,
   defStyleAttr: Int = 0
-) : View(context, attrs, defStyleAttr) {
-  var events = DragViewEvents(context)
+) : ViewGroup(context, attrs, defStyleAttr) {
+  var events = DragLayoutEvents(context)
 
   init {
     setOnTouchListener { view, event ->
